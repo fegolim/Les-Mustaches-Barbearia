@@ -25,16 +25,30 @@
 	<nav class="menu">
 		<img width="16%" th:src="@{/images/logo_sem_fundo.png}" />
 		<ul class="menu_li">
-			<li class="active"><a href="http://localhost:8080">Home</a></li>
-			<li class="active"><a href="#cliente">Clientes </a></li>
-			<li><a href="#profissional">Profissional</a></li>
-			<li><a href="#produto">Produtos</a></li>
-			<li><a href="#servico">Serviços</a></li>
-			<li><a th:href="@{/sig/pedido}">Pedidos</a></li>
+			<li><a class="menu__item" href="http://localhost:8080">Home</a></l>
+				<li><a class="menu__item" href="http://localhost:8080/#cliente">Clientes </a></li>
+				<li><a class="menu__item" href="http://localhost:8080/#profissional">Profissional</a></li>
+				<li><a class="menu__item" href="http://localhost:8080/#produto">Produtos</a></li>
+				<li><a class="menu__item" href="http://localhost:8080/#servico">Serviços</a></li>
+				<li><a class="menu__item" href="http://localhost:8080/#pedidos">Pedidos</a></li>
 		</ul>
 	</nav>
 	<div class="container my-5">
 		<br />
+		<div>
+			<!-- INICIO_BREADCRUMB				 -->
+			<div class="bodyPaginaInterna">
+				<div class="marginPaginaInterna">
+					<a href="http://localhost:8080"><span class="breadCrumFont">Home</span></a>
+					<span class=" > "> > </span>
+					<a href="http://localhost:8080/#servico"><span class="breadCrumFont">Serviços</span></a>
+					<span class=" > "> > </span>
+					<span class="breadCrumFont">Cadastrar</span>
+				</div>
+			</div>
+			<div class="mt-3"></div>
+		</div>
+		<!-- FIM_BREADCRUMB				 -->
 		<h3>Cadastrar Serviços</h3>
 		<div class="card">
 			<div class="card-body">

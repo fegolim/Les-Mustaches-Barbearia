@@ -11,7 +11,7 @@
 	<div th:if="${param.logout}">You have been logged out.</div>
 	<form th:action="@{/login}" method="post">
 		<div class="login-page">
-		<img width="50%" th:src="@{/images/logo_copy.jpeg}"/>
+		<img width="50%" th:src="@{/images/logo_copy.jpeg}" alt="Logo da barbearia Les Mustáchês"/>
 			<div class="formi">
 				<form>
 					<input type="text" name="username" placeholder="username" /> <input
@@ -28,10 +28,10 @@
 	</form>
 	<div class="image"> 
 		<div class= "quadrado">
-			<img width="80%" height="50%" th:src="@{/images/01.jpg}"/>
-			<img width="80%" height="40%" th:src="@{/images/03.jpg}"/>
+			<img width="80%" height="50%" th:src="@{/images/01.jpg}" alt="Imagem de barbeiro branco, com cabelos bem alinhados e sorridente, com uma tesoura na mão e puxando o próprio bigode"/>
+			<img width="80%" height="40%" th:src="@{/images/03.jpg}" alt="Imagem de barbeiro finalizando um corte de cabelo com uma maquininha e uma escova na mão de tirar pêlos"/>
 		</div>
-		<img width="300px" height="700px" th:src="@{/images/Imagem02.jpg}"/>
+		<img width="300px" height="700px" th:src="@{/images/Imagem02.jpg}" alt="Imagem de barbeiro aparando barba de homem negro deitado à cadeira de barbeiro"/>
 	</div>
 </body>
 </html>

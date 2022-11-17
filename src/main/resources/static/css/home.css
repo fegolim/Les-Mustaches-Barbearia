@@ -7,13 +7,6 @@ body {
 	box-sizing: border-box
 }
 
-.produto1 h1 {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
 .bgimg,
 .w3-display-container {
 	background-image: url(/images/fundo.png);
@@ -34,11 +27,66 @@ body {
 .w3-animate-top {
 	font-size: 50px;
 }
+.menu_logo{
+	width: 250px;
+ }
+.menu{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+    float: left;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+    padding: 8px
+}
+
+
+.menu_li{
+	display:flex;
+   	align-items:center ;
+   	justify-content: center;
+	width:100%;
+	list-style:none;
+	float:left;
+	background-color:rgb(0, 0, 0); 
+	color:rgb(255, 255, 255);
+	margin:0px;
+}
+.text_menu{
+	display:none;
+}
+.menu li{
+	text-align: center;
+	margin:auto;
+	float:left;
+}
+
+.menu li a{
+	color:rgb(255, 255, 255); 
+	text-decoration:none; 
+	display:block;
+	font-size: 20px;
+}
+
+.menu li a:hover{
+color:rgb(255, 255, 255);
+	text-decoration-line:underline;
+}
+#menu__toggle{
+	display:none;
+}
 
 .celendario {
 	padding-right: 10px;
+	color:white;
 }
-
+.text_agenda{
+	color:white !important;
+	text-decoration: none;
+}
 .button {
 	margin-top: 30px;
 	font-weight: bold;
@@ -47,6 +95,7 @@ body {
 	font-size: 20px;
 	border-style: none;
 }
+
 
 .w3-large,
 .w3-center {
@@ -64,34 +113,6 @@ body {
 
 }
 
-.menu {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	list-style: none;
-	float: left;
-	background-color: rgb(0, 0, 0);
-	color: rgb(255, 255, 255);
-}
-
-.menu li {
-	text-align: center;
-	margin: auto;
-	float: left;
-}
-
-.menu li a {
-	color: rgb(255, 255, 255);
-	text-decoration: none;
-	display: block;
-	font-size: 20px;
-}
-
-.menu li a:hover {
-	color: rgb(255, 255, 255);
-	text-shadow: 0px 0px 5px #fff;
-}
 
 .tela-scroll {
 	height: 100vh;
@@ -107,6 +128,7 @@ body {
 
 	background-color: white;
 	width: 100%;
+	height:100%;
 	position: relative;
 	display: flex;
 	flex-direction: row;
@@ -124,31 +146,28 @@ body {
 	text-align: center;
 	font-size: 35px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	align-items:center;
 	flex-direction: column;
 	padding: 20px;
 	margin: auto;
 	height: inherit;
-	flex: 1;
 	color:black;
 }
 .botao{
 	margin-top: 15px;
 }
 .img_cliente {
-	width: 100%;
+	height:100%;
 
-}
-
-.cliente-img {
-	flex: 0.44;
 }
 
 
 button {
 	transition-duration: 0.9s;
+	
 }
+
 
 .cadastra_cliente {
 	border-radius: 10px;
@@ -184,19 +203,13 @@ button {
 	text-align: center;
 	font-size: 35px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	align-items:center;
 	flex-direction: column;
 	padding: 20px;
 	margin: auto;
-	height: inherit;
-	flex: 1;
 	color:black;
 
-}
-
-.profissional-img {
-	flex: 0.44;
 }
 
 .img_profissional {
@@ -249,15 +262,15 @@ a:hover:before {
 
 
 
-#produto {
+.produto {
 	background-color: rgb(128, 128, 128);
-	width: 100%;
-	display: flex;
-	padding: 1rem;
-	justify-content: space-around;
-	text-align: center;
-	font-size: 60px;
-	color: rgb(255, 255, 255);
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: rgb(255, 255, 255);
+    gap: 1rem;
 
 }
 
@@ -276,18 +289,6 @@ a:hover:before {
 
 }
 
-.produtos2 {
-	background-color: rgb(128, 128, 128);
-	width: 100%;
-
-	display: flex;
-	padding: 1rem;
-	justify-content: space-around;
-	text-align: center;
-	font-size: 60px;
-	color: rgb(255, 255, 255);
-}
-
 .text-produto {
 	background-color: rgb(128, 128, 128);
 	text-align: center;
@@ -295,14 +296,6 @@ a:hover:before {
 	color: white;
 }
 
-.carrinho {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	gap: 20px;
-	width: 100%;
-}
 
 .produto1 {
 	width: 250px;
@@ -319,8 +312,14 @@ a:hover:before {
 
 
 .produto1 h1 {
-	font-size: 20px;
+	font-size: 17px;
+    height: 60px;
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
 }
+
+
 
 .produto1 p {
 	font-size: 16px;
@@ -502,7 +501,95 @@ a:hover:before {
 	font-size: 29px;
 }
 
-
+/*carrinho*/
+.icon_carrinho{
+	width: 40px;
+}
+.total-item {
+    margin-top: -39px;
+    font-weight: bold;
+    font-size: x-large;
+    margin-left: 90px;
+}
+.closes{
+    justify-content: left;
+    align-self: end;
+    margin-top: -70px;
+    margin:20px;
+    margin-right: 20px;
+    text-decoration: none;
+    -webkit-text-stroke: thick;
+    color:ivory;
+}
+.card_cart {
+    flex: 1;
+    padding: 0;
+}
+.total {
+	margin: -13px;
+    display: flex;
+    font-size: 17px;
+    color: #f5f5f5;
+    flex-direction: column;
+    background-color: black;
+}
+.cart_principal{
+    display: none;
+    width: 80%;
+    border:none;
+}
+.produto_carrinho {
+    width: 227px;
+    background-color: #f5f5f5ed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    padding-bottom: 20px;
+    margin: 20px;
+    border-radius: 10%;
+}
+.title_carrinho {
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+.btnAddCarrinho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 50%;
+    padding-top: 3px;
+}
+.cart-item .unit-price {
+  flex: 1;
+  font-size: 1.2rem;
+}
+.units {
+    display: contents;
+}
+.remove{
+    background-color: black;
+    width: 15rem;
+    text-align: center;
+    border-radius: 16px;
+    font-weight: bold;
+    font-size: 17px;
+    color: floralwhite;
+    display: flex;
+    gap: 11px;
+    padding: 8px 13px;
+}
+.text_total {
+    justify-items: center;
+    font-size: 20px;
+    text-align: center;
+    margin: 70px;
+    font-weight: bold;
+}
 @media screen and (max-width: 1200px) {
 	@media screen and (min-width: 902px) {
 		.w3-text-white {
@@ -522,22 +609,28 @@ a:hover:before {
 		}
 
 		#cliente {
-			background-color: #FFFF;
-			width: auto;
-			position: relative;
-		}
-
-		.text {
 			text-align: center;
 			font-size: 23px;
 			align-items: center;
 			height: auto;
 			width: auto;
+		}
+		.img_cliente{
+			width: 100%;
+			border: none;
+		}
+		.text {
+			text-align: center;
+			font-size: 23px;
+			align-items: center;
+			margin: auto;
+			display: block;
 
 		}
 
 		.title {
-			margin-top: 94px;
+			margin-top: 0px;
+    		margin-bottom: 0px;
 		}
 
 		.title_cliente {
@@ -564,6 +657,11 @@ a:hover:before {
 			margin: auto;
 			display: block;
 		}
+		.title{
+			margin-top: 0px;
+    		margin-bottom: 0px;
+		}
+		}
 
 		.img_profissional {
 			width: 100%;
@@ -571,16 +669,28 @@ a:hover:before {
 		}
 
 		/*Produtos*/
-		#produto {
+		.produto {
 			background-color: rgb(128, 128, 128);
 			width: 100%;
 			height: auto;
+			display:flex;
 			position: relative;
 			text-align: center;
 			font-size: 60px;
 			color: rgb(255, 255, 255);
 		}
 
+		.btnAddCarrinho {
+		    content: "Carrinho";
+		    display: flex;
+		    flex-direction: row;
+		    align-items: center;
+		    justify-content: center;
+		    gap: 20px;
+		    width: 50%;
+		    font-size: 17px;
+		}
+		
 		.produto1 {
 			margin: 3px;
 		}
@@ -591,7 +701,7 @@ a:hover:before {
 		}
 
 		.img-container .img-pruduto {
-			height: 150px;
+			height: 150px;	
 		}
 
 		.text-container {
@@ -604,6 +714,7 @@ a:hover:before {
 			font-size: 12px;
 			height: 272px;
 		}
+		
 
 		.text-container h3 {
 			margin: 20px 0px 10px 0px;
@@ -665,6 +776,7 @@ a:hover:before {
 			justify-content: center;
 			width: 100%;
 			align-content: center;
+			flex-flow: wrap;
 		}
 
 		.img-servico {
@@ -692,10 +804,101 @@ a:hover:before {
 			background-image: url(/images/combo.jpeg);
 		}
 	}
-}
+
 
 @media screen and (max-width:901px) {
+@media  screen and  (max-width:990px) {
+#menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+   background-color: white;
+}
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+  background-color: white;
+}
+#menu__toggle:checked ~ .menu_li {
+  left: 0 !important;
+}
+.menu li a:hover{
+	color:rgb(255, 255, 255);
+	text-decoration-line:underline;
+}
+.menu .menu__btn:hover{
+	text-decoration-line:underline;
+}
+.menu__btn {
+  position: absolute;
+  top: 52px;
+  left: 73px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 2;
+  text-transform: uppercase;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition-duration: .25s;
 
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.menu_li {
+  display: grid;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100vw;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 2px 2px 6px rgb(211, 215, 207);
+  transition-duration: .25s;
+  z-index: 1;
+}
+.text_menu{
+	display:flex;
+	margin-top: -10px;
+    margin-left: -52px;
+    font-weight: bold;
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: white !important;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+
+  transition-duration: .25s;
+}
+.menu__item::hover{
+  text-decoration: underline !important;
+}
+}
 	.w3-text-white {
 		margin-top: 4%;
 		background-image: url(/images/fundo.png);
@@ -771,7 +974,7 @@ a:hover:before {
 	}
 
 	/*Produtos*/
-	#produto {
+	#produtos {
 		background-color: rgb(128, 128, 128);
 		width: 100%;
 		height: 500px;
@@ -781,21 +984,23 @@ a:hover:before {
 		flex-direction: row;
 		gap: 15px;
 		color: rgb(255, 255, 255);
+		display:none;
 	}
 
 	.produtos2 {
 		display: none;
 	}
 
-	.produto1 {
+	/* .produto1 {
 		margin: 20px;
-	}
-h1.produto1{
-margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
+	} */
+
+	h1.produto1{
+		margin-top: 5px;
+			margin-bottom: 5px;
+			margin-left: 5px;
+			margin-right: 5px;
+		}
 
 	.img-container .img-pruduto {
 		height: 150px;
@@ -826,6 +1031,7 @@ margin-top: 5px;
 		padding: 20px;
 		justify-content: center;
 		align-items: center;
+		 gap: 12px;
 	}
 
 	.a-box {
@@ -877,7 +1083,7 @@ margin-top: 5px;
 	.lis-servico {
 		margin: 0px;
 		padding: 0px;
-		display: block;
+		display: block !important;
 	}
 
 	.items {

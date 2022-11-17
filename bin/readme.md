@@ -5,7 +5,7 @@
 **Grupo 1**  <br>
 Bruna Ciriaco Benedito<br>
 Fernanda Gonçalves de Lima<br>
-Flavia Correa de Moraes Cacau Alves<br>
+Luis Gustavo Baia Alves<br>
 Vicente Santos Gonçalves<br>
 
 ![image 1](https://user-images.githubusercontent.com/79234463/167618014-ae216a6c-6c31-48c8-9592-38d1895ef66c.png)

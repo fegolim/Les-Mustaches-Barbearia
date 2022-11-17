@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="../js/carrinho.js" async ></script>
 	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 
@@ -17,7 +18,7 @@
 		<div class="w3-display-middle">
 			<h1 class="w3-jumbo w3-animate-top">Les Mustaches Barbearia</h1>
 			<button type="button" class="button">
-				<a th:href="@{https://www.googleapis.com/auth/calendar.readonly}">
+				<a class="text_agenda" >
 					<img src="https://img.icons8.com/ios/30/ffffff/calendar-plus.png" class="celendario" />
 					Agenda Online
 				</a>
@@ -25,18 +26,33 @@
 			<p class="w3-large w3-center"> Viva o conforto e o bem estar de cuidar da você</p>
 		</div>
 		<div class="w3-display-bottomleft w3-padding-large">
-			<nav class="menu">
-				<img width="16%" th:src="@{/images/logo_sem_fundo.png}" />
-				<ul class="menu">
-					<li class="active"><a href="#">Home</a></li>
-					<li class="active"><a href="#cliente">Clientes </a></li>
-					<li><a href="#profissional">Profissional</a></li>
-					<li><a href="#produto">Produtos</a></li>
-					<li><a href="#servico">Serviços</a></li>
-					<li><a th:href="@{/sig/pedido}">Pedidos</a></li>
-				</ul>
-			</nav>
+		<div class="menu">
+		<input id="menu__toggle" type="checkbox" />
+		<label class="menu__btn" for="menu__toggle">
+			<span></span>
+			<p class="text_menu">Menu</p>
+		</label>
+		<img class="menu_logo" th:src="@{/images/logo_sem_fundo.png}" />
+
+		<ul class="menu_li">
+			<li class="active"><a href="#">Home</a></li>
+			<li class="active"><a href="#cliente">Clientes </a></li>
+			<li><a href="#profissional">Profissional</a></li>
+			<li><a href="#produto">Produtos</a></li>
+			<li><a href="#servico">Serviços</a></li>
+			<li><a th:href="@{/sig/pedido}">Pedidos</a></li>
+				<a class="carrinho">
+					<img class="icon_carrinho"src="./images/carrinho.png"/>
+					<div class="total-item"> 0 </div>	
+				</a>
+			</li>
+    	</ul>
+  </div>
 		</div>
+		<dialog  class="cart_principal" >
+		<div class="card_cart"> </div>
+		<div class="total"> </div>
+	</dialog>
 	</div>
 	<div class="tela-scroll">
 
@@ -64,7 +80,7 @@
 		<section id="profissional">
 			<div class="text2">
 				<p class="title"><img width="80px" th:src="@{/images/barbeiro.png}"
-						alt="logo de hoomem barbudo com uma tesoura ao lado"> Profissional </p>
+						alt="logo de homem barbudo com uma tesoura ao lado"> Profissional </p>
 				<p> Aqui colocamos nossos profissionais em primeiro lugar.</p>
 				<p></p>
 				<p>Quem optar por ser um de nossos profissionais, tem a liberdade de abrir a agenda de
@@ -81,112 +97,17 @@
 		</section>
 
 		<!--Seção Produtos -->
-
+	<div id="produtos">
 		<div class="container-produto">
-
 			<div class="text-produto">
 				<p class="title"><img width="80px" th:src="@{/images/produtos.png}"
 						alt="logo da seção Produtos, imagem de uma pincel de barbear"> Produtos </p>
 			</div>
+			<section class="produto">
 
-			<section id="produto">
-
-				<div class='produto1'>
-					<img class="img-produtos " th:src="@{/images/produtos/01.png}"
-						alt="Grooming para Cabelo BURB Midlands 250 mililitros" />
-					<h1>Grooming para Cabelo B.URB Midlands 250ml</h1>
-					<p class="preco1">R$59,90</p>
-					<div class="carrinho">
-						<input class="qdt" type="number" name="quantidade" min="1" max="100" placeholder="0">
-						<a> Carrinho </a>
-					</div>
-				</div>
-
-				<div class='produto1'>
-					<img class="img-produtos " th:src="@{/images/produtos/02.png}"
-						alt="Shampoo Barba Forte Gasoline 250 mililitros" />
-					<h1>Shampoo Barba Forte Gasoline 250ml</h1>
-					<p class="preco1">R$31,90</p>
-					<div class="carrinho">
-						<input class="qdt" type="number" name="quantidade" min="1" max="100" placeholder="0">
-						<a> Carrinho </a>
-					</div>
-				</div>
-
-
-				<div class='produto1'>
-					<img class="img-produtos " th:src="@{/images/produtos/03.png}"
-						alt="Kit de Barbear GoClinical composto por um Creme de Barbear Transparente 150 gramas + 1 Pós-barba anti-irritação 30 gramas" />
-					<h1>Kit de Barbear Go. Clinical</h1>
-					<p class="preco1">R$59,68</p>
-					<div class="carrinho">
-						<input class="qdt" type="number" name="quantidade" min="1" max="100" placeholder="0">
-						<a> Carrinho </a>
-					</div>
-				</div>
-
-				<div class='produto1'>
-					<img class="img-produtos " th:src="@{/images/produtos/04.png}"
-						alt="Shampoo Sólido Nutrição Kae Cosmeticos - 75 gramas" />
-					<h1>Shampoo Sólido Nutrição da Kae Cosmeticos - 75g</h1>
-					<p class="preco1">R$50,00</p>
-					<div class="carrinho">
-						<input class="qdt" type="number" name="quantidade" min="1" max="100" placeholder="0">
-						<a> Carrinho </a>
-					</div>
-				</div>
 			</section>
-
-			<section class="produtos2">
-
-				<div class='produto1'>
-					<img class="img-produtos " th:src="@{/images/produtos/05.png}"
-						alt="Protetor Solar épisol Cólor, Tom 6, Negro, FPS 70 40 gramas" />
-					<h1>Protetor Solar episol Color Tom 6 Negro 70 FPS 40g</h1>
-					<p class="preco1">R$69,90</p>
-					<div class="carrinho">
-						<input class="qdt" type="number" name="quantidade" min="1" max="100" placeholder="0">
-						<a> Carrinho </a>
-					</div>
-				</div>
-
-				<div class='produto1'>
-					<img class="img-produtos " th:src="@{/images/produtos/06.png}"
-						alt="Truss Uso Obrigatório Tratamento Reconstrutor 260 mililitros" />
-					<h1>Truss Uso Obrigatório - Tratamento Reconstrutor 260ml</h1>
-					<p class="preco1">R$91,99</p>
-					<div class="carrinho">
-						<input class="qdt" type="number" name="quantidade" min="1" max="100" placeholder="0">
-						<a> Carrinho </a>
-					</div>
-				</div>
-
-				<div class='produto1'>
-					<img class="img-produtos " th:src="@{/images/produtos/07.png}"
-						alt="Condicionador Para Cabelos Don Alcides Rolling Stones - 300 gramas" />
-					<h1>Condicionador Para Cabelo Don Alcides Rolling Stones - 300g</h1>
-					<p class="preco1">R$53,90</p>
-					<div class="carrinho">
-						<input class="qdt" type="number" name="quantidade" min="1" max="100" placeholder="0">
-						<a> Carrinho </a>
-					</div>
-				</div>
-
-				<div class='produto1'>
-					<img class="img-produtos " th:src="@{/images/produtos/08.png}" alt="Pomada em Pó - Róta 66" />
-					<h1>Pomada em Pó Route 66</h1>
-					<p class="preco1">R$34,90</p>
-					<div class="carrinho">
-						<input class="qdt" type="number" name="quantidade" min="1" max="100" placeholder="0">
-						<a> Carrinho </a>
-					</div>
-				</div>
-			</section>
-			<div class="seta">
-				<p th:href="@{/sig/produto}">Ver mais Produtos</p>
-				<a th:href="@{/sig/produto}" class="arrow "> </a>
-			</div>
 		</div>
+	</div>
 
 		<section id="servico">
 			<p class="title"><img width="80px" th:src="@{/images/servico.png}"
