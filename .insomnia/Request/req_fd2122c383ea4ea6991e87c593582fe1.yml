@@ -1,0 +1,30 @@
+_id: req_fd2122c383ea4ea6991e87c593582fe1
+type: Request
+parentId: wrk_b6ebdf3b566e4fb089de8570e1c1cfe8
+modified: 1669676665735
+created: 1669676656276
+url: http://localhost:8080/sig/clientes
+name: Acesso_sig/clientes_VEND
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: basic
+  useISO88591: false
+  disabled: false
+  username: maria
+  password: "456"
+metaSortKey: -1669671092669.4375
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

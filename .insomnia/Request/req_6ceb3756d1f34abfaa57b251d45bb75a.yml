@@ -1,0 +1,30 @@
+_id: req_6ceb3756d1f34abfaa57b251d45bb75a
+type: Request
+parentId: wrk_b6ebdf3b566e4fb089de8570e1c1cfe8
+modified: 1669676806898
+created: 1669676804611
+url: http://localhost:8080/sig/pedidos
+name: Acesso_sig/pedidos_ADMIN
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: basic
+  useISO88591: false
+  disabled: false
+  username: jose
+  password: "123"
+metaSortKey: -1669672266986.625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

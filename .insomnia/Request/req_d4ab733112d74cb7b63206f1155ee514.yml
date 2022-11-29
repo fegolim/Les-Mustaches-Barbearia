@@ -1,0 +1,30 @@
+_id: req_d4ab733112d74cb7b63206f1155ee514
+type: Request
+parentId: wrk_b6ebdf3b566e4fb089de8570e1c1cfe8
+modified: 1669686258358
+created: 1669676826455
+url: http://localhost:8080/sig/pedidos
+name: Acesso_sig/pedidos_OUTROS
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: basic
+  useISO88591: false
+  disabled: false
+  username: fernanda
+  password: "789"
+metaSortKey: -1669672071267.0938
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
