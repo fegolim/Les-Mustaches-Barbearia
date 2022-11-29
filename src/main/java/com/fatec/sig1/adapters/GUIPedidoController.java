@@ -6,6 +6,7 @@ import javax.validation.Valid;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,6 +27,7 @@ public class GUIPedidoController {
 	@Autowired
 	MantemPedido mantemPedido;
 
+	@PostAuthorize("hasRole('OUTROS')") // FERNANDA
 	@GetMapping("/pedidos")
 	public ModelAndView cadastrarPedido(PedidoDTO umPedido) {
 		logger.info(">>>>>> 1. controller pagina cadastrar pedido chamada ");
@@ -33,7 +35,7 @@ public class GUIPedidoController {
 		mv.addObject("umPedido", new PedidoDTO());
 		return mv;
 	}
-
+	@PostAuthorize("hasRole('OUTROS')") //FERNANDA
 	@GetMapping("/pedido")
 	public ModelAndView consultaPedidos() {
 		ModelAndView mv = new ModelAndView("consultarPedido");
