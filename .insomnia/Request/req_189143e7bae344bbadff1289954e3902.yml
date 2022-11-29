@@ -1,0 +1,30 @@
+_id: req_189143e7bae344bbadff1289954e3902
+type: Request
+parentId: wrk_b6ebdf3b566e4fb089de8570e1c1cfe8
+modified: 1669687528362
+created: 1669673101862
+url: http://localhost:8080/sig/pedido
+name: Acesso_sig/pedido_VEND
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: basic
+  useISO88591: false
+  disabled: false
+  username: maria
+  password: "456"
+metaSortKey: -1669672397466.3125
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

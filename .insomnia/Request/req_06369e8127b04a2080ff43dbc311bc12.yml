@@ -1,0 +1,30 @@
+_id: req_06369e8127b04a2080ff43dbc311bc12
+type: Request
+parentId: wrk_b6ebdf3b566e4fb089de8570e1c1cfe8
+modified: 1669688129087
+created: 1669678322260
+url: http://localhost:8080/login
+name: Acesso_sig/login_OUTROS
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: basic
+  useISO88591: false
+  disabled: false
+  username: fernanda
+  password: "789"
+metaSortKey: -1669670896949.9062
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

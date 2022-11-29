@@ -1,0 +1,30 @@
+_id: req_9054ec302f82402f9cafaadc078efae7
+type: Request
+parentId: wrk_b6ebdf3b566e4fb089de8570e1c1cfe8
+modified: 1669680219803
+created: 1669676299844
+url: http://localhost:8080/sig/cliente
+name: Acesso_sig/cliente_OUTROS
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: basic
+  useISO88591: false
+  disabled: false
+  username: fernanda
+  password: "789"
+metaSortKey: -1669671810307.7188
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

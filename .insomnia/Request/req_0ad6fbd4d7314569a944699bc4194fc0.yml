@@ -1,0 +1,30 @@
+_id: req_0ad6fbd4d7314569a944699bc4194fc0
+type: Request
+parentId: wrk_b6ebdf3b566e4fb089de8570e1c1cfe8
+modified: 1669676619748
+created: 1669676615656
+url: http://localhost:8080/sig/clientes
+name: Acesso_sig/clientes_ADMIN
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: basic
+  useISO88591: false
+  disabled: false
+  username: jose
+  password: "123"
+metaSortKey: -1669671745067.875
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
