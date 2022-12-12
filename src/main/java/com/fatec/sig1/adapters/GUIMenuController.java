@@ -17,6 +17,8 @@ public class GUIMenuController {
 	@PreAuthorize("hasAnyRole('ADMIN', 'VEND', 'OUTROS')") //FERNANDA
 	@GetMapping("/")
 	public ModelAndView home() {
-		return new ModelAndView("paginaMenu");
+		// return new ModelAndView("paginaMenu");
+		return new ModelAndView("index");
+
 	}
 }
